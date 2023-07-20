@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./dist/",
+    "moduleResolution": "Node16"
+  },
+  "extends": "@tsconfig/recommended/tsconfig.json",
+  "include": ["src/**/*"]
+}
