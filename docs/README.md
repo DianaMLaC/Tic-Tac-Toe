@@ -8,7 +8,7 @@ I've created a simple game of tic-tac-toe using TypeScript and React
 - **Responsive UI:** Works seamlessly on different screen sizes.
 
 ## Getting Started
-1. `git clone git@github.com/Niricha/Tic-Tac-Toe.git`
+1. `git clone git@github.com/DianaMLaC/Tic-Tac-Toe.git`
 2. `npm install`
 3. `npm run watch` and check that it worked
 4. `open public/index.html` and make sure the browser renders the image above
