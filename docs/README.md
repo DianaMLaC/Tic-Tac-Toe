@@ -1,5 +1,5 @@
 # Tic Tac Toe
-![alt-text](/src/tic-tac-toe-image.png "Tic-Tac-Toe")
+![alt-text](/public/tic-tac-toe-image.png "Tic-Tac-Toe")
 
 I've created a simple game of tic-tac-toe using TypeScript and React
 ## Features
