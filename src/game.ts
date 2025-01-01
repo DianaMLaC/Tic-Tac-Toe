@@ -1,10 +1,7 @@
 import Board from './board'
-// import Player from './player'
 
 class Game {
   board: Board
-  // playerX: Player
-  // playerO: Player
   currentPlayer: string
   el: HTMLElement
   result: HTMLParagraphElement
@@ -12,8 +9,6 @@ class Game {
   constructor(el: HTMLElement, result: HTMLParagraphElement) {
     this.el = el
     this.board = new Board()
-    // this.playerX = new Player('X')
-    // this.playerO = new Player('O')
     this.currentPlayer = Board.MARKS[0]
     this.result = result
   }
@@ -25,17 +20,12 @@ class Game {
       this.currentPlayer = Board.MARKS[0]
     }
     return this.currentPlayer
-    //switches from one player to another
   }
 
   playMove(pos: number[]) {
     if (this.board.isPosValid(pos)) {
-      // console.log(pos)
-      // console.log(this.currentPlayer)
-      //board places mark
       this.board.placeMark(pos, this.currentPlayer)
     } else {
-      // console.log(pos[0], pos[1])
       throw new Error('Position not valid')
     }
   }
@@ -58,7 +48,7 @@ class Game {
 
   draw() {
     const res = this.result
-    res.textContent = 'Draw. Try Again!'
+    res.textContent = 'Draw. Try Again by refreshing the page!'
   }
 }
 

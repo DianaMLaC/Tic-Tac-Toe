@@ -16,9 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   div.appendChild(result)
 
-  // const player_one = new Player('X')
-  // const player_two = new Player('O')
   const game = new Game(el, result)
-  // game.play()
-  const view = new View(game, el)
+  new View(game, el)
 })

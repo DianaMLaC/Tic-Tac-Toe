@@ -1,21 +1,12 @@
 class Board {
-  // static SIZE = 3
-  // static X: 'X'
-  // static O: 'O'
   static MARKS = ['X', 'O']
   grid: string[][]
-  // el: HTMLElement
-  // pos: number[]
 
   constructor() {
-    // const grid = new Array(3).fill(null).map((e) => (e = ['', '', '']))
     const grid = Array.from({ length: 3 }, (): string[] => ['', '', ''])
     this.grid = grid
-    // this.el = el
   }
-  // draw(): boolean {
-  //   return this.grid.flat().none((el): boolean => el === '')
-  // }
+
   isEmpty(): boolean {
     return this.grid.flat().every((el): boolean => el !== '')
   }
@@ -32,12 +23,9 @@ class Board {
     }
 
     const [row, col] = pos
-    // console.log('empty')
     if (this.isInRange(row) && this.isInRange(col)) {
-      // console.log('in range')
       return true
     }
-    // console.log('not in range')
     return false
   }
 
@@ -53,23 +41,6 @@ class Board {
     const [row, col] = pos
     this.grid[row][col] = mark
   }
-
-  // drawBoard(el: HTMLElement) {
-  //   const ul = document.createElement('ul')
-  //   ul.className = 'board'
-
-  //   for (let r = 0; r < 3; r++) {
-  //     for (let c = 0; c < 3; c++) {
-  //       const li = document.createElement('li')
-  //       li.className = 'cell'
-  //       li.dataset.row = r.toString()
-  //       li.dataset.col = c.toString()
-
-  //       ul.appendChild(li)
-  //     }
-  //   }
-  //   el.appendChild(ul)
-  // }
 
   winRow(mark: string): boolean {
     if (this.grid[0].every((el): boolean => el === mark)) {
@@ -124,8 +95,6 @@ class Board {
       }
     }
 
-    // console.log(diagonalLeft )
-    // console.log(diagonalRight)
     if (diagonalRight.every((el): boolean => el === mark)) {
       return true
     } else if (diagonalLeft.every((el): boolean => el === mark)) {
@@ -137,7 +106,6 @@ class Board {
 
   win(mark: string): boolean {
     if (this.winRow(mark)) {
-      // correct
       console.log('win row')
       return true
     } else if (this.winCol(mark)) {
@@ -149,8 +117,6 @@ class Board {
 
       return true
     } else {
-      // console.log('win booooo')
-
       return false
     }
   }
